@@ -1,0 +1,12 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.31"
+rstest = "0.18.2"
+thiserror = "1.0.56"
+
