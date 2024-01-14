@@ -122,11 +122,10 @@ impl Portfolio {
     }
 
     fn get_purchase_record(&self, symbol: &str) -> PortfolioResult<&[PurchaseRecord]> {
-        if let Some(records) = self.purchase_records.get(symbol) {
-            Ok(records)
-        } else {
-            Err(PortfolioError::NoSymbolHistory)
-        }
+        self.purchase_records
+            .get(symbol)
+            .map(|x| x.as_slice())
+            .ok_or(PortfolioError::NoSymbolHistory)
     }
 }
 
