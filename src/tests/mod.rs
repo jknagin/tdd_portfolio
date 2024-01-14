@@ -135,7 +135,7 @@ mod tests {
     }
 
     #[rstest]
-    fn separates_purchase_records_by_symcol(mut portfolio: Portfolio) -> PortfolioResult<()> {
+    fn separates_purchase_records_by_symbol(mut portfolio: Portfolio) -> PortfolioResult<()> {
         let ibm_shares = 1;
         let aapl_shares = 2;
         portfolio.purchase(IBM, ibm_shares)?;
