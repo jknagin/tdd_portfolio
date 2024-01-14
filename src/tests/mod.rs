@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod tests {
+mod portfolio_tests {
     use crate::*;
     use rstest::*;
 
